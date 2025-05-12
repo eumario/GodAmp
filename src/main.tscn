@@ -12,7 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gh0ne")
-DefaultSongsPath = "res://data/sample_songs/linkinparkhybridtheory_202007"
+DefaultSongsPath = "res://data/sample_songs"
 
 [node name="Centered" type="Control" parent="."]
 layout_mode = 2

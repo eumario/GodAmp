@@ -10,7 +10,7 @@ public abstract partial class VisualizerStrategy : Node2D
     
     [ExportGroup("Warp")]
     [ExportSubgroup("Base")]
-    [Export] public float FixedRotationValue = 0.05f; // Fixed rotation increment per frame
+    [Export] public float FixedRotationValue = 0.05f;
     [Export] public float RotationSpeedFactor = 0.5f; // How much the song affects rotation speed
     [Export] public float RotationSpeed = 1.0f;
     [Export] public float TunnelDepth = 1.0f;

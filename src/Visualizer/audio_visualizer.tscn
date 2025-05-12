@@ -83,7 +83,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 20.0
+wait_time = 40.0
 autostart = true
 
 [connection signal="resized" from="." to="." method="OnResized"]

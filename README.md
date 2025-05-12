@@ -1,18 +1,18 @@
 # GodAmp
 
-Modern Winamp clone made in Godot, featuring my own visualizers and fully cross-platform support.
+Modern Winamp clone made in Godot, featuring my own visualizers and fully cross-platform support. Currently only supports MP3 files.
 
-I made this as a submission for the Tool Jam 5 and as a learning project, since I've always wanted to make a music visualizer.
+I made this as a submission for the [Tool Jam 5](https://itch.io/jam/the-tool-jam-5) as a learning project, since I've always wanted to make a music visualizer.  There is a plan to eventually turn this into its own fully customizable player. For the sake of bringing the old internet feel, but using modern tools.
 
-I plan to eventually turn this into its own player, with full customization. For the sake of bringing the old internet feel, but using modern tools.
+*DISCLAIMER: This is a free, non-commercial project made for fun and will remain being one.  All rights to the original Winamp skins, themes, assets, and sample songs belong to their respective owners. This project does not claim ownership over them.*
 
-## Disclaimer
-This is a free, non-commercial project made for fun.
+## Sample Song Credits
+1. [Leader - Step Down](https://www.youtube.com/channel/UCDm2LMZIJjy63w-mHMely1Q)
+2. [Oceans Divide - Lipstick Lies](http://oceansdivide.com/)
+3. [Fall of Envy - Wondering](https://www.reverbnation.com/fallofenvy) 
+4. [AMRPHIS - Metalcore](https://youtu.be/WhU461oCmD8?si=nSzPaObakaQ9qYIr)
 
-All rights to the original Winamp skins, themes, and assets belong to their respective owners.
-
-This project does not claim ownership over them.
-
+As far as I know they are royalty/copyright free, but please do let me know if not, and I'll take them down.
 
 ## Jam Milestones
 - [X] Basic music player
@@ -47,16 +47,15 @@ This project does not claim ownership over them.
 - [X] Transitioning effects
 - [X] Export testing + fix bug fix
   - [X] Make sure build is working cross-platform
-- [ ] Change solution name to GodAmp
-- [ ] Put sample songs (copyright-free) in the bundled app
-- [ ] Code cleanup
+- [X] Change solution name to GodAmp
+- [X] Code cleanup
+- [ ] Change this section with list of features, and the below roadmap.
 - [ ] Public repo under permissive license + better README
 - [ ] Website + publish
 
 ## Future Work (post-launch)
-- [ ] Passthrough to interact with Desktop (godot has no support for non-convex-shaped area, oof)
-  - Maybe instead use actual Window nodes. Will require major refactor.
-- [ ] Better windows
+- [ ] Add support for other file types. 
+- [ ] Windows
 - [ ] Window Snapping
 - [ ] Working Frequency panel
 - [ ] Add ticks to EQ10

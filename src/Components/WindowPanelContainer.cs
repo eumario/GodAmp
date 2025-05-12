@@ -8,9 +8,9 @@ public partial class WindowPanelContainer : PanelContainer
 	
 	[Export] public Control Contents;
 	[Export] public bool MoveGlobalWindow = false;
-	
-	public bool Minimized = false;
-	public bool Closed = false;
+
+	private bool _minimized = false;
+	private bool _closed = false;
 		
 	private bool _dragging = false;
 	private Vector2 _dragOffset = Vector2.Zero;
@@ -25,7 +25,6 @@ public partial class WindowPanelContainer : PanelContainer
 			float scaleFactorY = GetWindow().Size.Y / GetViewport().GetVisibleRect().Size.Y;
 			float scaleFactor = (scaleFactorX + scaleFactorY) / 2.0f;
 			
-			// Scale the mouse movement by the window scale factor
 			Vector2 scaledMotion = motionEvent.Relative * scaleFactor;
 			
 			// Apply the scaled movement to the window position
@@ -39,21 +38,20 @@ public partial class WindowPanelContainer : PanelContainer
 	{
 		if (_dragging && !MoveGlobalWindow)
 		{
-			// Only handle regular control dragging in _Process
 			GlobalPosition = GetGlobalMousePosition() - _dragOffset;
 		}
 	}
 	
 	public virtual void OnCloseButtonPressed()
 	{
-		Closed = !Closed;
+		_closed = !_closed;
 		Visible = !Visible;
 		EmitSignal(SignalName.CloseButtonClicked);
 	}
 
 	public virtual void OnMinimizeButtonPressed()
 	{
-		Minimized = !Minimized;
+		_minimized = !_minimized;
 		Contents.Visible = !Contents.Visible;
 	}
 

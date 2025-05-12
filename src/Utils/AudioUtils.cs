@@ -71,11 +71,8 @@ public static class AudioUtils
             // For TagLib, we need to create a temporary file in the user's temp directory
             var tempDir = Path.GetTempPath();
             var tempFile = Path.Combine(tempDir, Path.GetFileName(fullPath));
-            
-            // Write the data to the temp file
             File.WriteAllBytes(tempFile, data);
 
-            // Read metadata using TagLib#
             var tagFile = TagLib.File.Create(tempFile);
             var tag = tagFile.Tag;
             var props = tagFile.Properties;
@@ -122,7 +119,8 @@ public static class AudioUtils
 
     public static string GetFullTrackTitle(Track track)
     {
-        if (track == null) return "Unknown Track";
+        if (track == null)
+            return "Unknown Track";
         return track.UseFileName ? track.Name : $"{track.TrackNumber}. {track.Artist} - {track.Name}";
     }
 }

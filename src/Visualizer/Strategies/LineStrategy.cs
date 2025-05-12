@@ -73,29 +73,23 @@ public partial class LineStrategy : VisualizerStrategy
     {
         float halfHeight = ViewportSize.Y / 2;
             
-        // Generate random offsets for the entire line
         float randomX = (float)(GD.RandRange(-RandomOffsetAmount, RandomOffsetAmount));
         float randomY = (float)(GD.RandRange(-RandomOffsetAmount, RandomOffsetAmount));
 
         for (int i = 0; i < SampleCount; i++)
         {
-            // Get frequency range for this sample point
             float hzMin = GetFrequencyForSampleIndex(i);
             float hzMax = GetFrequencyForSampleIndex(i + 1);
 
-            // Get magnitude and apply amplitude/noise
             float value = GetFrequencyRangeMagnitude(hzMin, hzMax);
             value *= Amplitude;
             value += GD.Randf() * NoiseAmount - (NoiseAmount * 0.5f);
-
-            // Position the point
             _points[i] = new Vector2(
                 ViewportSize.X * i / (SampleCount - 1) + randomX,
                 halfHeight - (value * halfHeight) + randomY
             );
         }
 
-        // Apply Catmull-Rom smoothing and update active line
         var smoothPoints = GenerateCatmullRomPoints(_points, PointsPerSegment).ToArray();
         _line.Points = smoothPoints;
     }
@@ -157,31 +151,24 @@ public partial class LineStrategy : VisualizerStrategy
     
     private void UpdateAudioReactivity(double delta)
     {
-        // Update overall audio magnitude
         float currentMagnitude = GetAverageAudioMagnitude();
         SmoothedMagnitude = Mathf.Lerp(SmoothedMagnitude, currentMagnitude, SmoothingFactor);
             
-        // Calculate frequency balance for rotation direction
         float lowFreqMagnitude = GetFrequencyRangeMagnitude(20f, 200f);
         float highFreqMagnitude = GetFrequencyRangeMagnitude(2000f, 20000f);
         float totalMagnitude = lowFreqMagnitude + highFreqMagnitude;
             
         if (totalMagnitude > 0.001f)
         {
-            // Update direction based on frequency balance
             float normalizedBalance = (highFreqMagnitude - lowFreqMagnitude) / totalMagnitude;
             float directionTarget = Mathf.Tanh(normalizedBalance * DirectionSensitivity);
             SmoothedDirection = Mathf.Lerp(SmoothedDirection, directionTarget, DirectionSmoothingFactor);
                 
-            // Update depth based on overall audio intensity
             float depthTarget = Mathf.Tanh(totalMagnitude * DepthSensitivity);
             SmoothedDepth = Mathf.Lerp(SmoothedDepth, depthTarget, DepthSmoothingFactor);
         }
             
-        // Update time offset based on audio direction
         TimeOffset = FixedRotationValue * (1.0f + (SmoothedDirection * RotationSpeedFactor));
-            
-        // Update color hue over time
         ColorHue = (ColorHue + ColorChangeSpeed * (float)delta) % 1.0f;
     }
 }

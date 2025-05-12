@@ -89,7 +89,6 @@ namespace GodAmp.Visualizer
 
         private void InitializeViewports()
         {
-            // Get viewport containers and components
             _containerA = GetNode<SubViewportContainer>("ContainerA");
             _containerB = GetNode<SubViewportContainer>("ContainerB");
             _viewportA = _containerA.GetNode<SubViewport>("SubViewport");
@@ -97,7 +96,6 @@ namespace GodAmp.Visualizer
             _rectA = _viewportA.GetNode<ColorRect>("ColorRect");
             _rectB = _viewportB.GetNode<ColorRect>("ColorRect");
             
-            // Configure viewports
             foreach (var viewport in new[] { _viewportA, _viewportB })
             {
                 viewport.RenderTargetClearMode = SubViewport.ClearMode.Never;
@@ -105,11 +103,9 @@ namespace GodAmp.Visualizer
                 viewport.GetNode<ColorRect>("Background").Color = Colors.Black;
             }
             
-            // Get shader materials
             _shaderMaterialA = (ShaderMaterial)_rectA.Material;
             _shaderMaterialB = (ShaderMaterial)_rectB.Material;
             
-            // Set initial visibility
             _containerA.Visible = true;
             _containerB.Visible = true;
         }
@@ -163,7 +159,6 @@ namespace GodAmp.Visualizer
                 // Wait until viewport is done rendering
                 RenderingServer.ForceSync();
                 
-                // Get the viewport's image and update feedback texture
                 var viewportImage = texture.GetImage();
                 if (viewportImage.GetFormat() != _feedbackImage.GetFormat())
                 {
@@ -178,7 +173,6 @@ namespace GodAmp.Visualizer
             ActiveContainer.ZIndex = 0;
             InactiveContainer.ZIndex = 1;
             
-            // Switch active viewport
             _isUsingA = !_isUsingA;
         }
         
@@ -193,10 +187,7 @@ namespace GodAmp.Visualizer
             _viewportA.Size = new Vector2I((int)Size.X, (int)Size.Y);
             _viewportB.Size = new Vector2I((int)Size.X, (int)Size.Y);
             
-            // Recreate feedback texture with new size
             InitializeFeedbackTexture();
-            
-            // Recreate strategy
             RefreshStrategy(_viewportA.Size);
         }
     }

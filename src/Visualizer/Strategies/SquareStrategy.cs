@@ -78,19 +78,21 @@ public partial class SquareStrategy : VisualizerStrategy
             child.QueueFree();
         }
         
-        string[] wallNames = { "Top", "Bottom", "Left", "Right" };
-        Vector2[] wallPositions = {
-            new Vector2(viewportSize.X/2, -25),
-            new Vector2(viewportSize.X/2, viewportSize.Y + 25),
-            new Vector2(-25, viewportSize.Y/2),
-            new Vector2(viewportSize.X + 25, viewportSize.Y/2)
-        };
-        Vector2[] wallSizes = {
-            new Vector2(viewportSize.X + 100, 50),
-            new Vector2(viewportSize.X + 100, 50),
-            new Vector2(50, viewportSize.Y + 100),
-            new Vector2(50, viewportSize.Y + 100)
-        };
+        string[] wallNames = ["Top", "Bottom", "Left", "Right"];
+        Vector2[] wallPositions =
+        [
+            new(viewportSize.X/2, -25),
+            new(viewportSize.X/2, viewportSize.Y + 25),
+            new(-25, viewportSize.Y/2),
+            new(viewportSize.X + 25, viewportSize.Y/2)
+        ];
+        Vector2[] wallSizes =
+        [
+            new(viewportSize.X + 100, 50),
+            new(viewportSize.X + 100, 50),
+            new(50, viewportSize.Y + 100),
+            new(50, viewportSize.Y + 100)
+        ];
         
         for (int i = 0; i < 4; i++)
         {
@@ -151,7 +153,7 @@ public partial class SquareStrategy : VisualizerStrategy
         _square.Position = new Vector2(-_currentSize/2, -_currentSize/2);
         
         var collisionShape = _body.GetNode<CollisionShape2D>("CollisionShape2D");
-        var shape = collisionShape.Shape as RectangleShape2D;
+        var shape = (RectangleShape2D)collisionShape.Shape;
         shape.Size = new Vector2(_currentSize, _currentSize);
     }
     
@@ -176,17 +178,13 @@ public partial class SquareStrategy : VisualizerStrategy
         _body.ApplyTorque(torque * (float)delta);
         
         if (_body.LinearDamp > 0.05f)
-        {
             _body.LinearDamp = 0.05f + midFreq * 0.1f;
-        }
         
         if (_body.AngularDamp > 0.05f)
-        {
             _body.AngularDamp = 0.05f + highFreq * 0.1f;
-        }
     }
     
-    private float GetFrequencyForSampleIndex(int index, int sampleCount)
+    private static float GetFrequencyForSampleIndex(int index, int sampleCount)
     {
         return Mathf.Exp(Mathf.Lerp(Mathf.Log(20f), Mathf.Log(22050f), (float)index / sampleCount));
     }
@@ -199,7 +197,7 @@ public partial class SquareStrategy : VisualizerStrategy
     
     private void UpdateAudioReactivity(double delta)
     {
-        int sampleCount = 64;
+        const int sampleCount = 64;
         float sum = 0f;
         
         for (int i = 0; i < sampleCount; i++)

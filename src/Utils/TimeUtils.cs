@@ -7,7 +7,6 @@ public static class TimeUtils
     public static string FormatAsTrackTime(float seconds, int minuteDigits = 1)
     {
         var time = TimeSpan.FromSeconds(seconds);
-        // build "D1", "D2", etc.
         string minFmt = $"D{minuteDigits}";
         string minutes = ((int)time.TotalMinutes).ToString(minFmt);
         string secondsPart = time.Seconds.ToString("D2");  // always two-digit seconds

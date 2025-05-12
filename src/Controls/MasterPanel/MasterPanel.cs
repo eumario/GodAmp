@@ -9,12 +9,6 @@ namespace GodAmp.Controls.MasterPanel;
 
 public partial class MasterPanel : WindowPanelContainer
 {
-	private enum SoundMode
-	{
-		Stereo,
-		Mono
-	}
-
 	[Signal] public delegate void ToggleEqualizerRequestedEventHandler();
 	[Signal] public delegate void TogglePlaylistRequestedEventHandler();
 	

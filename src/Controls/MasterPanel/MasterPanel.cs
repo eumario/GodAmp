@@ -1,11 +1,11 @@
 using System;
+using GodAmp.Autoload;
+using GodAmp.Components;
+using GodAmp.Player;
+using GodAmp.Utils;
 using Godot;
-using SpectralFX.Autoload;
-using SpectralFX.Components;
-using SpectralFX.Player;
-using SpectralFX.Utils;
 
-namespace SpectralFX.Controls.MasterPanel;
+namespace GodAmp.Controls.MasterPanel;
 
 public partial class MasterPanel : WindowPanelContainer
 {

@@ -1,6 +1,6 @@
 using Godot;
 
-namespace SpectralFX.Autoload;
+namespace GodAmp.Autoload;
 
 public partial class SignalBus : Node
 {

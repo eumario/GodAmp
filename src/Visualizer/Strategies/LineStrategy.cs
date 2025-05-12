@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Godot;
 
-namespace SpectralFX.Visualizer.Strategies;
+namespace GodAmp.Visualizer.Strategies;
 
 public partial class LineStrategy : VisualizerStrategy
 {

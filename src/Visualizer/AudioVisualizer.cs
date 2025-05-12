@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Godot;
 
-namespace SpectralFX.Visualizer
+namespace GodAmp.Visualizer
 {
     public partial class AudioVisualizer : Control
     {

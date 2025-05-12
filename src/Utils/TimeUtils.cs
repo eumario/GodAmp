@@ -1,6 +1,6 @@
 using System;
 
-namespace SpectralFX.Utils;
+namespace GodAmp.Utils;
 
 public static class TimeUtils
 {

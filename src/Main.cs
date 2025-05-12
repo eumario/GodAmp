@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using GodAmp.Autoload;
+using GodAmp.Data;
+using GodAmp.Player;
+using GodAmp.Utils;
 using Godot;
-using SpectralFX.Autoload;
-using SpectralFX.Data;
-using SpectralFX.Player;
-using SpectralFX.Utils;
 
-namespace SpectralFX;
+namespace GodAmp;
 
 public partial class Main : CenterContainer
 {

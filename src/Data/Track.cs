@@ -1,6 +1,6 @@
 using Godot;
 
-namespace SpectralFX.Data;
+namespace GodAmp.Data;
 
 public partial class Track : Resource
 {

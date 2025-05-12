@@ -1,8 +1,8 @@
+using GodAmp.Autoload;
+using GodAmp.Utils;
 using Godot;
-using SpectralFX.Autoload;
-using SpectralFX.Utils;
 
-namespace SpectralFX.Controls.Playlist;
+namespace GodAmp.Controls.Playlist;
 
 public partial class PlaylistTrackEntry : HBoxContainer
 {

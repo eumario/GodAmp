@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using GodAmp.Data;
 using Godot;
-using SpectralFX.Data;
 using FileAccess = Godot.FileAccess;
 using TagLib;
 using File = System.IO.File;
 
-namespace SpectralFX.Utils;
+namespace GodAmp.Utils;
 
 public static class AudioUtils
 {

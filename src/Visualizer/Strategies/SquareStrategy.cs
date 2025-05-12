@@ -1,6 +1,6 @@
 using Godot;
 
-namespace SpectralFX.Visualizer.Strategies;
+namespace GodAmp.Visualizer.Strategies;
 
 public partial class SquareStrategy : VisualizerStrategy
 {

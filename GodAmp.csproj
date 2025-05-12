@@ -6,7 +6,4 @@
   <ItemGroup>
     <PackageReference Include="TagLibSharp" Version="2.3.0" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="README.md" />
-  </ItemGroup>
 </Project>

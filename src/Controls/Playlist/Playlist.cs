@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
+using GodAmp.Components;
+using GodAmp.Data;
+using GodAmp.Player;
+using GodAmp.Utils;
 using Godot;
-using SpectralFX.Components;
-using SpectralFX.Data;
-using SpectralFX.Player;
-using SpectralFX.Utils;
 
-namespace SpectralFX.Controls.Playlist;
+namespace GodAmp.Controls.Playlist;
 
 public partial class Playlist : WindowPanelContainer
 {

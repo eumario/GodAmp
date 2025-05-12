@@ -1,6 +1,6 @@
 using Godot;
 
-namespace SpectralFX.Utils;
+namespace GodAmp.Utils;
 
 public static class UIUtils
 {

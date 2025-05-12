@@ -1,7 +1,7 @@
+using GodAmp.Utils;
 using Godot;
-using SpectralFX.Utils;
 
-namespace SpectralFX.Visualizer;
+namespace GodAmp.Visualizer;
 
 public abstract partial class VisualizerStrategy : Node2D
 {

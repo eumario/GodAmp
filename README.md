@@ -45,11 +45,11 @@ This project does not claim ownership over them.
 - [X] Add UI Scaling button
 - [X] More visualizer effects (nice-to-have)
 - [X] Transitioning effects
-- [ ] Export testing + fix bug fix
-  - [ ] Make sure build is working cross-
-  - [ ] Put sample songs (copyright-free) in the bundled app
-- [ ] Code cleanup
+- [X] Export testing + fix bug fix
+  - [X] Make sure build is working cross-platform
 - [ ] Change solution name to GodAmp
+- [ ] Put sample songs (copyright-free) in the bundled app
+- [ ] Code cleanup
 - [ ] Public repo under permissive license + better README
 - [ ] Website + publish
 

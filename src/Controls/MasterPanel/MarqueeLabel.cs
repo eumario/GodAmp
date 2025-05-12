@@ -1,7 +1,7 @@
 using System.Text;
 using Godot;
 
-namespace SpectralFX.Controls.MasterPanel;
+namespace GodAmp.Controls.MasterPanel;
 
 public partial class MarqueeLabel : Label
 {

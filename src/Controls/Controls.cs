@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
+using GodAmp.Data;
+using GodAmp.Player;
 using Godot;
-using SpectralFX.Components;
-using SpectralFX.Data;
-using SpectralFX.Player;
+using GodAmp.Components;
 
-namespace SpectralFX.Controls;
+namespace GodAmp.Controls;
 
 public partial class Controls : VBoxContainer
 {

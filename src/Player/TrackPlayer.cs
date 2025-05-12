@@ -1,7 +1,7 @@
+using GodAmp.Data;
 using Godot;
-using SpectralFX.Data;
 
-namespace SpectralFX.Player;
+namespace GodAmp.Player;
 
 public partial class TrackPlayer : AudioStreamPlayer
 {

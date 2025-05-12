@@ -1,6 +1,6 @@
 using Godot;
 
-namespace SpectralFX.Components;
+namespace GodAmp.Components;
 
 public partial class DraggablePanel : Panel
 {

@@ -1,8 +1,8 @@
+using GodAmp.Components;
+using GodAmp.Utils;
 using Godot;
-using SpectralFX.Components;
-using SpectralFX.Utils;
 
-namespace SpectralFX.Controls.Equalizer;
+namespace GodAmp.Controls.Equalizer;
 
 public partial class Equalizer : WindowPanelContainer
 {

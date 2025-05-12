@@ -1,0 +1,52 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="GotAmp"
+config/description="Modern Winamp Clone. Submission for https://itch.io/jam/the-tool-jam-5."
+config/tags=PackedStringArray("music", "tool")
+run/main_scene="uid://db6b3hi4hou7w"
+config/features=PackedStringArray("4.4", "C#", "Forward Plus")
+boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 0)
+boot_splash/show_image=false
+config/icon="uid://c0s3kbvufqavr"
+
+[autoload]
+
+SignalBus="*res://src/Autoload/SignalBus.cs"
+
+[display]
+
+window/size/borderless=true
+window/size/transparent=true
+window/stretch/mode="canvas_items"
+window/per_pixel_transparency/allowed=true
+window/transparent_background=true
+
+[dotnet]
+
+project/assembly_name="SpectralFX"
+
+[gui]
+
+theme/custom="uid://dikbou1c1od2v"
+
+[physics]
+
+2d/bg_color=Color(0.141176, 0.141176, 0.141176, 0)
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0.301961, 0.301961, 0.301961, 0)
+viewport/transparent_background=true
+viewport/size/borderless=true

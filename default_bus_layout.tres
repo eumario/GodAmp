@@ -1,0 +1,23 @@
+[gd_resource type="AudioBusLayout" load_steps=5 format=3 uid="uid://q4nytj4efvuj"]
+
+[sub_resource type="AudioEffectSpectrumAnalyzer" id="AudioEffectSpectrumAnalyzer_j3pel"]
+resource_name = "SpectrumAnalyzer"
+
+[sub_resource type="AudioEffectAmplify" id="AudioEffectAmplify_j3pel"]
+resource_name = "Amplify"
+
+[sub_resource type="AudioEffectEQ10" id="AudioEffectEQ10_j3pel"]
+resource_name = "EQ10"
+
+[sub_resource type="AudioEffectPanner" id="AudioEffectPanner_j3pel"]
+resource_name = "Panner"
+
+[resource]
+bus/0/effect/0/effect = SubResource("AudioEffectSpectrumAnalyzer_j3pel")
+bus/0/effect/0/enabled = true
+bus/0/effect/1/effect = SubResource("AudioEffectAmplify_j3pel")
+bus/0/effect/1/enabled = true
+bus/0/effect/2/effect = SubResource("AudioEffectEQ10_j3pel")
+bus/0/effect/2/enabled = true
+bus/0/effect/3/effect = SubResource("AudioEffectPanner_j3pel")
+bus/0/effect/3/enabled = true

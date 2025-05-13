@@ -1,8 +1,10 @@
 # GodAmp
 
-Modern Winamp clone made in Godot, featuring my own visualizers and fully cross-platform support. Currently only supports MP3 files.
+A reimplementation of Winamp 2.9 in Godot, with full cross-platform support.
 
-I made this as a submission for the [Tool Jam 5](https://itch.io/jam/the-tool-jam-5) as a learning project, since I've always wanted to make a music visualizer.  There is a plan to eventually turn this into its own fully customizable player. For the sake of bringing the old internet feel, but using modern tools.
+I made this as a submission for the [Tool Jam 5](https://itch.io/jam/the-tool-jam-5), since I've always wanted to make a music player with visualizers.
+
+There is a plan to eventually turn this into its own fully customizable player that brings the old internet feel, but built with modern and able to run on any platform.
 
 *DISCLAIMER: This is a free, non-commercial project made for fun and will remain being one.  All rights to the original Winamp skins, themes, assets, and sample songs belong to their respective owners. This project does not claim ownership over them.*
 

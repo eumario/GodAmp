@@ -8,6 +8,8 @@ There is a plan to eventually turn this into its own fully customizable player t
 
 *DISCLAIMER: This is a free, non-commercial project made for fun and will remain being one.  All rights to the original Winamp skins, themes, assets, and sample songs belong to their respective owners. This project does not claim ownership over them.*
 
+![readme](https://github.com/user-attachments/assets/daf7fb55-8723-4bc4-af56-cc560df16008)
+
 ## Sample Song Credits
 1. [Leader - Step Down](https://www.youtube.com/channel/UCDm2LMZIJjy63w-mHMely1Q)
 2. [Oceans Divide - Lipstick Lies](http://oceansdivide.com/)
